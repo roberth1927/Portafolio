@@ -1,10 +1,10 @@
 import {
-  HiHome,
-  HiUser,
-  HiRectangleGroup,
-  HiViewColumns,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope
+    HiHomeModern,
+    HiUserCircle,
+    HiRectangleStack,
+    HiViewColumns,
+    HiChatBubbleLeftRight,
+    HiEnvelopeOpen
 } from 'react-icons/hi2';
 
 import  Link  from 'next/link';
@@ -12,12 +12,12 @@ import { useRouter } from 'next/router';
 
 //  links
 const navData = [
-  { name: 'home', path: '/', icon: <HiHome /> },
-  { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
+  { name: 'home', path: '/', icon: <HiHomeModern/> },
+  { name: 'about', path: '/about', icon: <HiUserCircle /> },
+  { name: 'services', path: '/services', icon: <HiRectangleStack /> },
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
-  { name: 'testimonials', path: '/testimonials', icon: <HiChatBubbleBottomCenterText />,},
-  { name: 'contact', path: '/contact', icon: <HiEnvelope />,},
+  { name: 'testimonials', path: '/testimonials', icon: <HiChatBubbleLeftRight/>,},
+  { name: 'contact', path: '/contact', icon: <HiEnvelopeOpen />,},
 ];
 
 const Nav = () => {
@@ -27,14 +27,12 @@ const Nav = () => {
 
   return (
 
-     <nav className='flex flex-col items-center xl:justify-center gap-y-4
-                     fixed h-max-botton-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen '>
+     <nav className='fixed top-0 z-50 w-full mt-auto h-max-botton-0 flex flex-col items-center gap-y-4 xl:justify-center xl:right-[2%] xl:w-16 xl:max-w-md xl:h-screen '>
       
-      <div className='flex w-full xl:flex-col items-center justify-between 
-                      xl:justify-center gap-y-10 px-4 md-px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
+      <div className='flex w-full gap-y-10 px-4 h-[80px] py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:flex-col items-center justify-between xl:justify-center xl:px-0 xl:h-max xl:rounded-full'>
         {
-          navData.map((link, index) => {
-            return (
+          navData.map((link) => 
+              (
                 <Link className={`${link.path === pathname && 'text-accent'} relative flex  item-center group hover:text-accent transition-all-duration-300 `}
                       href={link.path} key={link.name}>
 
@@ -54,7 +52,7 @@ const Nav = () => {
                 </Link>
             )
             
-          })
+          )
         }
        </div>
     </nav>
