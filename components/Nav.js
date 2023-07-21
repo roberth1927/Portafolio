@@ -27,7 +27,7 @@ const Nav = () => {
 
   return (
 
-     <nav className='fixed top-0 z-50 w-full mt-auto h-max-botton-0 flex flex-col items-center gap-y-4 xl:justify-center xl:right-[2%] xl:w-16 xl:max-w-md xl:h-screen '>
+     <nav className='fixed bottom-0 z-50 w-full mt-auto h-max-botton-0 flex flex-col items-center gap-y-4 xl:justify-center xl:right-[2%] xl:w-16 xl:max-w-md xl:h-screen '>
       
       <div className='flex w-full gap-y-10 px-4 h-[80px] py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:flex-col items-center justify-between xl:justify-center xl:px-0 xl:h-max xl:rounded-full'>
         {

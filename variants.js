@@ -15,9 +15,11 @@ export const fadeIn = (direction, delay) => {
       y: 0,
       x: 0,
       opacity: 1,
+      letterSpacing: 'initial',
       transition: {
         type: 'tween',
         duration: 1.4,
+        staggerChildren: 0.05,
         delay: delay,
         ease: [0.25, 0.25, 0.25, 0.75],
       },

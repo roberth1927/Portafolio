@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
         <motion.div key={router.route} className='h-full'>
 
           <Transition />
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
 
         </motion.div>
       </AnimatePresence>
