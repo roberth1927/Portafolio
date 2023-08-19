@@ -25,6 +25,11 @@ module.exports = {
         primary: '#131424',
         secondary: '#393A47',
         accent: '#F13024',
+        naranja: '#00CED1',
+        gradient: {
+          start: '#00CED1', // Naranja
+          end: '',   // Azul oscuro
+        },
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',

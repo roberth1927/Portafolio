@@ -11,21 +11,21 @@ const Work = () => {
 
     <div className='h-full bg-primary/30 py-36  flex items-center'>
 
-      <Circles />
+    {/*   <Circles /> */}
 
       <div className='container mx-auto'>
 
         <div className='flex flex-col xl:flex-row gap-x-8'>
 
-          <div className='text-center  flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
+          <div className='text-center  flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 xl:mt-16'>
 
             <motion.h2 
                 variants={fadeIn('up', 0.3)}   
                 initial= 'hidden'
                 animate= 'show'
                 exit= 'hidden'
-                 className='h2 xl:mt-8'>
-              My Work <span className='text-accent'>.</span>
+                className='h2 xl:mt-16'>
+              Proyectos <span className='text-naranja'>.</span>
             </motion.h2>
             <motion.p 
                 variants={fadeIn('up', 0.3)}   
@@ -33,7 +33,7 @@ const Work = () => {
                 animate= 'show'
                 exit= 'hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-              asdadfdf sajkfhsk hekjhkwjrhwkej  eo wrhwekrwehrkwerhwerfkweh wkhekwehewh wekwefhwkfhwkjfwkjfshj
+              Explora mi trabajo, proyectos que reflejan mi dedicación a la creatividad y excelencia.
             </motion.p>
           </div>
           
@@ -42,14 +42,14 @@ const Work = () => {
                 initial= 'hidden'
                 animate= 'show'
                 exit= 'hidden'
-            className='w-full xl:max-w-[65%]'>
+            className='w-full xl:max-w-[65%] xl:mt-16'>
              <WorkSlider />
           </motion.div>
 
         </div>
 
       </div>
-      <Bulb />
+      {/* <Bulb /> */}
     </div>
   )
 };

@@ -11,7 +11,7 @@ const Services = () => {
 
     <div className='h-full bg-primary/30 py-36  flex items-center'>
 
-      <Circles />
+      {/* <Circles /> */}
 
       <div className='container mx-auto'>
 
@@ -25,7 +25,7 @@ const Services = () => {
                 animate= 'show'
                 exit= 'hidden'
                  className='h2 xl:mt-8'>
-              My Serivices <span className='text-accent'>.</span>
+              Mis  <span className='bg-gradient-to-r from-gradient-start'>Serivicios.</span>
             </motion.h2>
             <motion.p 
                 variants={fadeIn('up', 0.3)}   
@@ -33,7 +33,7 @@ const Services = () => {
                 animate= 'show'
                 exit= 'hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
-              asdadfdf sajkfhsk hekjhkwjrhwkej  eo wrhwekrwehrkwerhwerfkweh wkhekwehewh wekwefhwkfhwkjfwkjfshj
+              Mi Enfoque es Transformar Ideas Innovadoras en Experiencias Digitales.
             </motion.p>
           </div>
           
@@ -49,7 +49,7 @@ const Services = () => {
         </div>
 
       </div>
-      <Bulb />
+      {/* <Bulb /> */}
     </div>
   )
 };

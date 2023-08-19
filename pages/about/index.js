@@ -7,40 +7,68 @@ import {
   FaJs,
   FaReact,
   FaWordpress,
-  FaFigma
+  FaFigma,
+  FaAngular,
+  FaVuejs,
+  FaPhp,
+  FaLaravel,
+  FaNode
 } from 'react-icons/fa';
 
 import CountUp from 'react-countup';
 import {
-  SiNextdotjs,
-  SiFramer,
   SiAdobexd,
-  SiAdobephotoshop
+  SiAdobephotoshop,
+  SiMongodb,
+  SiMysql,
+  SiDocker,
+  SiGit,
+  SiGithub,
+  SiNestjs,
+  SiNextdotjs
 } from 'react-icons/si';
 
 const aboutData = [
   {
-    title: 'skills',
+    title: 'habilidades',
     info: [
       {
-        title: 'Web Development',
+        title: 'Frontend',
         icons: [
           <FaHtml5 />,
           <FaCss3 />,
           <FaJs />,
+          <FaAngular />,
+          <FaVuejs />,
           <FaReact />,
           <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          
         ],
       },
       {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        title: 'Backend',
+        icons: [
+          <FaJs />,
+          <FaPhp />,
+          <FaNode />,
+          <SiNestjs />,
+          <FaLaravel />,
+       
+        ],
+      },
+      {
+        title: 'Otras Tecnologías',
+        icons: [
+        <SiMongodb />, 
+        <SiMysql />, 
+        <SiDocker />,
+        <SiGit />,
+        <SiGithub />,
+      ],
       },
     ],
   },
-  {
+ /*  {
     title: 'awards',
     info: [
       {
@@ -52,38 +80,30 @@ const aboutData = [
         stage: '2009 - 2010',
       },
     ],
-  },
+  }, */
   {
-    title: 'experience',
+    title: 'experiencia',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Telx Computers',
+        stage: '2022 - 2023',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
+        title: 'Corvus Lab S.A.S',
+        stage: '2021 - 2022',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Motoreste Motors S.A.',
+        stage: '2018 - 2020',
       },
     ],
   },
   {
-    title: 'credentials',
+    title: 'Formación',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
-      },
-      {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
-      },
-      {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'TECNÓLOGO EN ANALISIS Y DESARROLLO DE SISTEMAS DE INFORMACION',
+        stage: '2019',
       },
     ],
   },
@@ -96,11 +116,12 @@ import Circles from '../../components/Circles.js';
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left  '>
-      <Circles />
+     {/* <Circles />
 
-      <motion.div 
+       <motion.div 
         variants={fadeIn('right', 0.2)}   
         initial= 'hidden'
         animate= 'show'
@@ -110,7 +131,7 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-
+ */}
 
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
 
@@ -121,16 +142,19 @@ const About = () => {
                 initial= 'hidden'
                 animate= 'show'
                 exit= 'hidden'
-               className='h2'>Captivating 
-               <span className='text-accent'>stories</span> birth magnificent desingns 
+               className='h2 pt-4 xl:pt-0'>Innovación a Través de  
+               <span className='bg-gradient-to-r from-gradient-start '> Código y Creatividad.</span>  
           </motion.h2>
           <motion.p
               variants={fadeIn('right', 0.4)}   
               initial= 'hidden'
               animate= 'show'
               exit= 'hidden'
-              className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 '>10 years ago, I began freelancing as a developer, Since then, i've donee remote work for agencies, consulted for startup, and collabored  on digital product for
-            bussiness and consumer use
+              className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 '>El desarrollo de habilidades son el núcleo de mi
+                                                                                    motivación. Comencé como autodidacta, con
+                                                                                    libros y tutoriales para ampliar mis conocimientos. Posteriormente, realicé la
+                                                                                    carrera de Tecnólogo en Desarrollo de Sistemas de Información,
+                                                                                    ampliando aún más mi experiencia.
            </motion.p>
 
           <motion.div 
@@ -143,33 +167,33 @@ const About = () => {
 
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 '>
 
-                <div className='text=2xl xl:text-4xl font-extrabold text-accent  mb-2'>
-                  <CountUp start={0} end={4} duration={15}/> +
+                <div className='text=2xl xl:text-4xl font-extrabold bg-gradient-to-r from-gradient-start  mb-2'>
+                  <CountUp start={0} end={5} duration={12}/> +
                 </div>
 
-                <div>Years of experience</div>
+                <div>Años de experiencia</div>
                  
               </div>
 
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 '>
 
-                <div className='text=2xl xl:text-4xl font-extrabold text-accent  mb-2' >
-                  <CountUp start={0} end={100} duration={15}/> +
+                <div className='text=2xl xl:text-4xl font-extrabold bg-gradient-to-r from-gradient-start  mb-2' >
+                  <CountUp start={0} end={10} duration={12}/> +
+                </div>
+
+                <div>Clientes satisfechos</div>
+                 
+              </div>
+
+             {/*  <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 '>
+
+                <div className='text=2xl xl:text-4xl font-extrabold bg-gradient-to-r from-gradient-start  mb-2' >
+                  <CountUp start={0} end={100} duration={10}/> +
                 </div>
 
                 <div>Satisfied clients</div>
                  
-              </div>
-
-              <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 '>
-
-                <div className='text=2xl xl:text-4xl font-extrabold text-accent  mb-2' >
-                  <CountUp start={0} end={100} duration={15}/> +
-                </div>
-
-                <div>Satisfied clients</div>
-                 
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
@@ -187,7 +211,7 @@ const About = () => {
               aboutData.map((item, itemIndex) => (
 
                 <div key={itemIndex} 
-                     className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-500 '}
+                     className={`${index === itemIndex && 'text-naranja after:w-[100%] after:bg-naranja after:transition-all after:duration-500 '}
                                 cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[0.2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
@@ -199,7 +223,7 @@ const About = () => {
 
           </div>
 
-          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4  items-center xl:items-start' >
+          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 xl:ml-20 items-center xl:items-start' >
             {
               aboutData[index].info.map((item, itemIndex) => (
 

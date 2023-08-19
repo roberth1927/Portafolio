@@ -4,7 +4,7 @@ const Avatar = () => {
   return ( 
       <div>
         <Image 
-          src={'/avatar.png'}
+          src={'/robin.png'}
           width={737}
           height={678}
           alt=""
