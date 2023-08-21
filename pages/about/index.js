@@ -6,8 +6,6 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
-  FaFigma,
   FaAngular,
   FaVuejs,
   FaPhp,
@@ -17,8 +15,6 @@ import {
 
 import CountUp from 'react-countup';
 import {
-  SiAdobexd,
-  SiAdobephotoshop,
   SiMongodb,
   SiMysql,
   SiDocker,
@@ -35,35 +31,35 @@ const aboutData = [
       {
         title: 'Frontend',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaAngular />,
-          <FaVuejs />,
-          <FaReact />,
-          <SiNextdotjs />,
+          { icon: <FaHtml5 />, key: 'html5' },
+          { icon: <FaCss3 />, key: 'css3' },
+          { icon: <FaJs />, key: 'js' },
+          { icon: <FaAngular />, key: 'angular' },
+          { icon: <FaVuejs />, key: 'vuejs' },
+          { icon: <FaReact />, key: 'react' },
+          { icon: <SiNextdotjs />, key: 'nextjs' },
           
         ],
       },
       {
         title: 'Backend',
         icons: [
-          <FaJs />,
-          <FaPhp />,
-          <FaNode />,
-          <SiNestjs />,
-          <FaLaravel />,
+          { icon: <FaJs />, key: 'backend-js' },
+          { icon: <FaPhp />, key: 'php' },
+          { icon: <FaNode />, key: 'node' },
+          { icon: <SiNestjs />, key: 'nestjs' },
+          { icon: <FaLaravel />, key: 'laravel' },
        
         ],
       },
       {
         title: 'Otras Tecnologías',
         icons: [
-        <SiMongodb />, 
-        <SiMysql />, 
-        <SiDocker />,
-        <SiGit />,
-        <SiGithub />,
+          { icon: <SiMongodb />, key: 'mongodb' },
+          { icon: <SiMysql />, key: 'mysql' },
+          { icon: <SiDocker />, key: 'docker' },
+          { icon: <SiGit />, key: 'git' },
+          { icon: <SiGithub />, key: 'github' },
       ],
       },
     ],
@@ -235,10 +231,10 @@ const About = () => {
 
                   <div className='flex gap-x-4'>
                     {
-                      item.icons?.map((icon, itemIndex) => (
-                         <div key={itemIndex} className='text-2xl text-white'>
+                      item.icons?.map((icon) => (
+                         <div key={icon.key} className='text-2xl text-white'>
                            
-                          {icon}
+                          {icon.icon}
                            
                         </div>
                          
