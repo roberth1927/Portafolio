@@ -74,7 +74,7 @@ const ServiceSlider = () => {
 
               <div className='text-3xl'>
 
-                <RxArrowTopRight className='group-hover:rotate-45 group-hover:text-naranja transition-all duration-300'/>
+                <RxArrowTopRight className='group-hover:rotate-45 group-hover:green-pink-gradient transition-all duration-300'/>
 
               </div>
             </div>

@@ -20,7 +20,7 @@ const Work = () => {
           <div className='text-center  flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 xl:mt-16'>
 
             <motion.h2 
-                variants={fadeIn('up', 0.3)}   
+                variants={fadeIn('up', 0.1)}   
                 initial= 'hidden'
                 animate= 'show'
                 exit= 'hidden'
@@ -28,7 +28,7 @@ const Work = () => {
               Proyectos <span className='text-naranja'>.</span>
             </motion.h2>
             <motion.p 
-                variants={fadeIn('up', 0.3)}   
+                variants={fadeIn('up', 0.1)}   
                 initial= 'hidden'
                 animate= 'show'
                 exit= 'hidden'
@@ -38,7 +38,7 @@ const Work = () => {
           </div>
           
           <motion.div 
-                variants={fadeIn('down', 0.6)}   
+                variants={fadeIn('down', 0.2)}   
                 initial= 'hidden'
                 animate= 'show'
                 exit= 'hidden'

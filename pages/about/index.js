@@ -26,6 +26,23 @@ import {
 
 const aboutData = [
   {
+    title: 'experiencia',
+    info: [
+      {
+        title: 'Telx Computers',
+        stage: '2022 - 2023',
+      },
+      {
+        title: 'Corvus Lab S.A.S',
+        stage: '2021 - 2022',
+      },
+      {
+        title: 'Motoreste Motors S.A.',
+        stage: '2018 - 2020',
+      },
+    ],
+  },
+  {
     title: 'habilidades',
     info: [
       {
@@ -78,23 +95,6 @@ const aboutData = [
     ],
   }, */
   {
-    title: 'experiencia',
-    info: [
-      {
-        title: 'Telx Computers',
-        stage: '2022 - 2023',
-      },
-      {
-        title: 'Corvus Lab S.A.S',
-        stage: '2021 - 2022',
-      },
-      {
-        title: 'Motoreste Motors S.A.',
-        stage: '2018 - 2020',
-      },
-    ],
-  },
-  {
     title: 'Formación',
     info: [
       {
@@ -134,27 +134,25 @@ const About = () => {
         <div className='flex flex-1 flex-col justify-center'>
 
           <motion.h2 
-                variants={fadeIn('right', 0.2)}   
+                variants={fadeIn('right', 0.1)}   
                 initial= 'hidden'
                 animate= 'show'
                 exit= 'hidden'
-               className='h2 pt-4 xl:pt-0'>Innovación a Través de  
-               <span className='bg-gradient-to-r from-gradient-start '> Código y Creatividad.</span>  
+               className='titleh2 pt-4 xl:pt-0'>Innovación a Través de   
+               <span className='green-pink-gradient rounded-xl px-2'>Código y Creatividad.</span>  
           </motion.h2>
           <motion.p
-              variants={fadeIn('right', 0.4)}   
+              variants={fadeIn('right', 0.2)}   
               initial= 'hidden'
               animate= 'show'
               exit= 'hidden'
-              className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 '>El desarrollo de habilidades son el núcleo de mi
+              className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>El desarrollo de habilidades son el núcleo de mi
                                                                                     motivación. Comencé como autodidacta, con
-                                                                                    libros y tutoriales para ampliar mis conocimientos. Posteriormente, realicé la
-                                                                                    carrera de Tecnólogo en Desarrollo de Sistemas de Información,
-                                                                                    ampliando aún más mi experiencia.
+                                                                                    libros y tutoriales para ampliar mis conocimientos.
            </motion.p>
 
           <motion.div 
-            variants={fadeIn('right', 0.6)}   
+            variants={fadeIn('right', 0.2)}   
             initial= 'hidden'
             animate= 'show'
             exit= 'hidden'
@@ -163,8 +161,8 @@ const About = () => {
 
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 '>
 
-                <div className='text=2xl xl:text-4xl font-extrabold bg-gradient-to-r from-gradient-start  mb-2'>
-                  <CountUp start={0} end={5} duration={12}/> +
+                <div className='text=2xl xl:text-4xl font-extrabold green-pink-gradient rounded-xl  mb-2 px-2 py-1'>
+                  <CountUp start={0} end={5} duration={10}/> +
                 </div>
 
                 <div>Años de experiencia</div>
@@ -173,8 +171,8 @@ const About = () => {
 
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 '>
 
-                <div className='text=2xl xl:text-4xl font-extrabold bg-gradient-to-r from-gradient-start  mb-2' >
-                  <CountUp start={0} end={10} duration={12}/> +
+                <div className='text=2xl xl:text-4xl font-extrabold green-pink-gradient rounded-xl mb-2 px-2 py-1' >
+                  <CountUp start={0} end={10} duration={10}/> +
                 </div>
 
                 <div>Clientes satisfechos</div>
@@ -207,7 +205,7 @@ const About = () => {
               aboutData.map((item, itemIndex) => (
 
                 <div key={itemIndex} 
-                     className={`${index === itemIndex && 'text-naranja after:w-[100%] after:bg-naranja after:transition-all after:duration-500 '}
+                     className={`${index === itemIndex && 'py-1 px-1 green-pink-gradient after:w-[100%] after:green-pink-gradient rounded-lg after:transition-all after:duration-500 '}
                                 cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[0.2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >

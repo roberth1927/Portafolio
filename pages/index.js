@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import {fadeIn} from '../variants';
 import ParticlesContainer from '../components/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn';
+import { BsArrowRight } from 'react-icons/bs'
+import Link from "next/link";
 import Avatar from '../components/Avatar';
 
 const Home = () => {
@@ -11,23 +13,38 @@ const Home = () => {
                <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
 
                  <motion.h1 
-                   variants={fadeIn('down',0.2)}
+                   variants={fadeIn('down',0.1)}
                    initial='hidden'
                    animate='show'
                    exit='hidden'
                    className="h1">Programador <br />
-                   <span className="bg-gradient-to-r from-gradient-start">FullStack</span>
+                   <span className="green-pink-gradient rounded-xl px-2 ">FullStack</span>
                  </motion.h1>
 
 
                  <motion.p
-                    variants={fadeIn('right',0.3)}
+                    variants={fadeIn('right',0.1)}
                     initial='hidden'
                     animate='show'
                     exit='hidden'
-                    className="max-w-sm xl:max-w-xl max-auto xl:mx-0 mb-10 xl:mb-16">
-                    Soy un apasionado desarrollador con una sólida base en programación y un compromiso constante con la excelencia técnica. Mi trayectoria abarca varios años en la industria tecnológica, donde he ocupado puestos full-stack en diferentes empresas, lo que me ha brindado una perspectiva amplia y profunda del ciclo de desarrollo de software e impulsar soluciones innovadoras.
+                    className="max-w-sm xl:max-w-xl max-auto xl:mx-0 mb-10 xl:mb-16 text-left p-5 xl:pl-0">
+                    Desarrollador con una sólida base en programación y un compromiso constante con la excelencia técnica. Mi trayectoria abarca varios años en la industria tecnológica, donde he ocupado puestos full-stack en diferentes empresas, lo que me ha brindado una perspectiva amplia y profunda del ciclo de desarrollo de software e impulsar soluciones innovadoras.
                  </motion.p>
+
+                 <Link href={'/work'}>
+                  <motion.button  
+                    variants={fadeIn('right',0.1)}
+                    initial='hidden'
+                    animate='show'
+                    exit='hidden' className='btn rounded-full border green-pink-gradient max-w-[170px] px-8 
+                                       transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-naranja group'>
+                     <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500'>Proyectos</span>
+                     <BsArrowRight className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 
+                                                group-hover:opacity-100 transition-all duration-300 absolute text-[22px]'/>
+                     </motion.button>
+                 
+                 </Link>
+
                  {/*  
                  <div className="flex justify-center relative xl:hidden">
                    <ProjectsBtn /> 
@@ -48,7 +65,7 @@ const Home = () => {
               
                <ParticlesContainer />
                <motion.div 
-                    variants={fadeIn('up',0.5)}
+                    variants={fadeIn('up',0.1)}
                     initial='hidden'
                     animate='show'
                     exit='hidden'
