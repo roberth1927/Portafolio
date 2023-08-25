@@ -32,16 +32,16 @@ const Home = () => {
                  </motion.p>
 
                  <Link href={'/work'}>
-                  <motion.button  
+                  <motion.div  
                     variants={fadeIn('right',0.1)}
                     initial='hidden'
                     animate='show'
                     exit='hidden' className='btn rounded-full border green-pink-gradient max-w-[170px] px-8 
-                                       transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-naranja group'>
-                     <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500'>Proyectos</span>
+                                       transition-all duration-300 flex items-center justify-center overflow-hidden group'>
+                     <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-200'>Proyectos</span>
                      <BsArrowRight className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 
-                                                group-hover:opacity-100 transition-all duration-300 absolute text-[22px]'/>
-                     </motion.button>
+                                                group-hover:opacity-100 transition-all duration-200 absolute text-[22px]'/>
+                     </motion.div>
                  
                  </Link>
 

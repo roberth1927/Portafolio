@@ -25,23 +25,7 @@ import {
 } from 'react-icons/si';
 
 const aboutData = [
-  {
-    title: 'experiencia',
-    info: [
-      {
-        title: 'Telx Computers',
-        stage: '2022 - 2023',
-      },
-      {
-        title: 'Corvus Lab S.A.S',
-        stage: '2021 - 2022',
-      },
-      {
-        title: 'Motoreste Motors S.A.',
-        stage: '2018 - 2020',
-      },
-    ],
-  },
+ 
   {
     title: 'habilidades',
     info: [
@@ -103,6 +87,23 @@ const aboutData = [
       },
     ],
   },
+  /*  {
+    title: 'experiencia',
+    info: [
+      {
+        title: 'Telx Computers',
+        stage: '2022 - 2023',
+      },
+      {
+        title: 'Corvus Lab S.A.S',
+        stage: '2021 - 2022',
+      },
+      {
+        title: 'Motoreste Motors S.A.',
+        stage: '2018 - 2020',
+      },
+    ],
+  }, */
 ];
 
 

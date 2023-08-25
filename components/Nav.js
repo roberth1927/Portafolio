@@ -7,6 +7,10 @@ import {
     HiEnvelopeOpen
 } from 'react-icons/hi2';
 
+import {
+  BsPersonWorkspace
+} from 'react-icons/bs';
+
 import  Link  from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -14,10 +18,10 @@ import { useRouter } from 'next/router';
 const navData = [
   { name: 'home', path: '/', icon: <HiHomeModern/> },
   { name: 'about', path: '/about', icon: <HiUserCircle /> },
-  { name: 'services', path: '/services', icon: <HiRectangleStack /> },
+  { name: 'Experience', path: '/testimonials', icon: <BsPersonWorkspace/>,},
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
-/*   { name: 'testimonials', path: '/testimonials', icon: <HiChatBubbleLeftRight/>,},
- */  { name: 'contact', path: '/contact', icon: <HiEnvelopeOpen />,},
+  { name: 'services', path: '/services', icon: <HiRectangleStack /> },
+  { name: 'contact', path: '/contact', icon: <HiEnvelopeOpen />,},
 ];
 
 const Nav = () => {

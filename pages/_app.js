@@ -12,7 +12,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <AnimatePresence mode='wait'>
-        <motion.div key={router.route} className='h-full'>
+        <motion.div  initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 1 }} key={router.route} className='h-full'>
 
         
           <Component {...pageProps} />

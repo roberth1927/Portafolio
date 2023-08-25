@@ -4,7 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination, Autoplay, Parallax } from 'swiper';
 
 
 
@@ -16,25 +16,25 @@ import { FaQuoteLeft } from 'react-icons/fa'
 // testimonial data
 const testimonialData = [
   {
-    image: '/t-avt-1.png',
-    name: 'Anne Smith',
-    position: 'Customer',
+    image: '/telx.jpg',
+    name: 'Telx Computers',
+    position: '2022 - 2023',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Desarrollar módulos innovadores para clases virtuales y campañas de marketing por correo electrónico, contribuyendo directamente a la expansión de la presencia en línea, Me enfoqué en la identificación y resolución de errores existentes, mejorando la calidad y confiabilidad del software, colaboré en la optimización de módulos existentes utilizados para citas en línea, brindando a los usuarios una experiencia más fluida, tambien desarrolle módulos de contabilidad para el pago a clientes y trabajadores, asegurando un proceso financiero eficiente y transparente.',
   },
   {
-    image: '/t-avt-2.png',
-    name: 'Jane Doe',
-    position: 'Customer',
+    image: '/corvus1.png',
+    name: 'Corvus Lab S.A.S',
+    position: '2021 - 2022',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Durante mi tiempo en Corvus Lab S.A.S, tuve la oportunidad de trabajar en diversos proyectos clave. Contribuí al desarrollo y optimización del módulo de nómina, participando en la implementación de soluciones para resoluciones de facturación electrónica y nómina electrónica. También colaboré en la creación de módulos de contabilidad y recursos humanos.',
   },
   {
-    image: '/t-avt-3.png',
-    name: 'Jhon Doe',
-    position: 'Customer',
+    image: '/motoreste.jpg',
+    name: 'Motoreste  S.A.',
+    position: '2018 - 2020',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Desarrollo de un sistema integral para la gestión de vehículos en reparación. Este sistema permitía el ingreso eficiente de automóviles, capturando información detallada y fotos para evaluar su estado. Este sistema también gestionaba la asignación de mecánicos y la disponibilidad del taller, optimizando los tiempos de reparación. Además, se registraban los tiempos de entrada y posibles tiempos de entrega, mejorando la planificación y la comunicación con los clientes.',
   },
 ];
 
@@ -46,8 +46,12 @@ const  TestimonialSlider = () => {
       pagination={{
         clickable:true,
       }}
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Autoplay, Parallax]}
       className='h-[400px]'
+      autoplay={{ delay: 6000 }}
+      speed={2000}
+      loop={true}
+      parallax={true}
      >
 
      {
@@ -59,7 +63,7 @@ const  TestimonialSlider = () => {
                 <div className='w-full max-w-[300px] flex flex-col xl:justify-center items-center realtive mx-auto xl:mx-0'>
                    <div className='flex flex-col justify-center text-center'>
 
-                       <div>
+                       <div className='pl-6 '>
                          <Image src={person.image} width={100} height={100} alt='' />                          
                        </div>
 
@@ -70,10 +74,10 @@ const  TestimonialSlider = () => {
 
                 <div className='flex-1 flex flex-col justify-center 
                                 before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 
-                                xl:before:h-[200px] relative xl:pl-20'>
+                                xl:before:h-[200px] relative xl:pl-20 ' data-swiper-parallax='scroll:-100%'>
 
                   <div className='mb-4'>
-                    <FaQuoteLeft  className='text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0'/></div>
+                    <FaQuoteLeft  className='text-4xl xl:text-4xl text-white/20 mx-auto md:mx-0'/></div>
 
                   <div className='xl:text-lg text-center md:text-left'>
                     {person.message}
@@ -83,7 +87,10 @@ const  TestimonialSlider = () => {
                 
               </div>
 
+              
+
           </SwiperSlide>
+          
         ))}
      </Swiper>
   );
