@@ -124,7 +124,7 @@ const WorkSlider = () => {
                       <div className="card-back-content bg-tertiary"> 
                           
                               <h3 className='text-white text-[20px] font-bold text-center'>
-                                Tecnologías
+                                En construccion
                               </h3>      
 
                       </div>
